@@ -1,0 +1,76 @@
+/*
+
+-------------------------------------
+
+Project     : X3
+Filename    : _badges.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+
+-------------------------------------
+
+*/
+
+.x3_badge{
+
+    padding         : 3px 10px 3px 10px;
+    margin          : 0 5px 5px 0;
+    cursor          : pointer;
+    display         : inline-block;
+    border-radius   : 4px;
+    font-size       : 12px;
+    text-decoration : none;
+
+    @extend .colorset--primary;
+
+    &:hover,
+    &:focus{
+       text-decoration : none;
+    }
+
+    .fa,
+    .fas{
+
+       margin : 0 0 0 5px;
+
+    }
+
+    > span{
+        margin-left: 10px;
+    }
+
+    &--close{
+        float  : right;
+        cursor : pointer;
+    }
+
+    &--alert{
+        @extend .x3-colorset--alert;
+    }
+
+//    &--orange{
+//        @extend .colorset--orange;
+//    }
+
+    &--danger{
+        @extend .x3-colorset--danger;
+    }
+
+    &--info{
+        @extend .x3-colorset--info;
+    }
+
+    &--succes{
+        @extend .x3-colorset--succes;
+    }
+
+    &--white{
+        @extend .x3-colorset--white;
+    }
+
+    &--grey{
+        @extend .x3-colorset--grey;
+    }
+
+}
