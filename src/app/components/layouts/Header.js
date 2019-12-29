@@ -6,7 +6,6 @@ import {SubHeaderPages} from "./headers/Pages";
 import {SubHeaderUsers} from "./headers/Users";
 
 export const Header = (props) => {
-
     return  <div className="header-main">
                 <div className="header-main__top">
                     <div className="x3_container-fluid" role="banner">
@@ -18,6 +17,7 @@ export const Header = (props) => {
                                 <NavLink activeClassName='active__nav' exact to="/">Home</NavLink>
                                 <NavLink activeClassName='active__nav' to="/pages">Pages</NavLink>
                                 <NavLink activeClassName='active__nav' to="/users">Users</NavLink>
+                                <NavLink activeClassName='active__nav' to="/logout">Logout</NavLink>
                             </nav>
                             <div className="header-main__user">
                                 <span>

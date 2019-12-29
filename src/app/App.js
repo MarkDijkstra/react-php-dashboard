@@ -8,28 +8,31 @@ import {
     useParams
 } from "react-router-dom";
 
-import {Header}   from "./components/layouts/Header";
-import {Main}     from "./components/layouts/Main";
-import {Footer}   from "./components/layouts/Footer";
-import {Home}     from "./components/pages/Home";
-import {Users}    from "./components/pages/Users";
-import {Pages}    from "./components/pages/Pages";
-import {NotFound} from "./components/pages/NotFound";
+//router layout 
+import {RouteLayout}  from "./RouteLayout";
+
+//layout wrappers
+import {MainLayout}   from "./components/layouts/MainLayout";
+import {SingleLayout} from "./components/layouts/SingleLayout";
+
+//pages
+import {Home}         from "./components/pages/Home";
+import {Users}        from "./components/pages/Users";
+import {Pages}        from "./components/pages/Pages";
+import {Logout}       from "./components/pages/Logout";
+import {NotFound}     from "./components/pages/NotFound";
 
 export class App extends React.Component {
     render() {
         return (
             <Router>
-                <Header/>
-                <Main>
-                    <Switch>
-                        <Route path="/" exact component={Home}/>
-                        <Route path="/users" component={Users}/>
-                        <Route path="/pages" component={Pages}/>
-                        <Route component={NotFound} />
-                    </Switch>
-                </Main>
-                <Footer/>
+                <Switch>
+                    <RouteLayout layout={MainLayout} path="/" exact component={Home}/>
+                    <RouteLayout layout={MainLayout} path="/users" component={Users}/>
+                    <RouteLayout layout={MainLayout} path="/pages" component={Pages}/>
+                    <RouteLayout layout={SingleLayout} path="/logout" component={Logout}/>
+                    <RouteLayout layout={MainLayout} component={NotFound} />
+                </Switch>          
             </Router>
         );
     }
