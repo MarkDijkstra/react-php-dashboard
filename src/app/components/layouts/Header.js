@@ -10,7 +10,7 @@ export const Header = (props) => {
                 <div className="header-main__top">
                     <div className="x3_container-fluid" role="banner">
                         <div className="header-main__logo">
-                            Skeleton
+                            <NavLink exact to="/">Skeletonboard</NavLink>
                         </div>
                         <div className="header-main__nav">
                             <nav>

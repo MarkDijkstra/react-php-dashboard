@@ -20,30 +20,19 @@ Last change : --/--/----
     }
 
     &__logo {
-
-        float       : left;
-        width       : auto;
-        height      : 100%;
-        padding     : 0 30px;
-        line-height : 70px;
-        position    : relative;
-        font-weight : bold;
-        color       : $theme-white;
-
-        &:after {
-
-            content: "";
-            position: absolute;
-            right: -30px;
-            top: 0;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 40px 30px 0 0;
-            border-color: transparent;
-
+      
+        a{
+            float           : left;
+            width           : auto;
+            height          : 100%;
+            padding         : 0 30px;
+            line-height     : 70px;
+            position        : relative;
+            font-weight     : bold;
+            color           : $theme-white;
+            text-decoration : none;
         }
-
+           
     }
 
     &__nav {
