@@ -20,7 +20,7 @@ import {Home}         from "./components/pages/Home";
 import {Users}        from "./components/pages/Users";
 import {Pages}        from "./components/pages/Pages";
 import {Logout}       from "./components/pages/Logout";
-import {Login}       from "./components/pages/Login";
+import {Login}        from "./components/pages/Login";
 import {NotFound}     from "./components/pages/NotFound";
 
 export class App extends React.Component {

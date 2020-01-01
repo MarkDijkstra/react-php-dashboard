@@ -8,7 +8,14 @@ Last change : --/--/----
 
 .form__login{
 
-    width : 400px;
-    float : left;
+    fieldset{
+        padding          : 30px;
+        border-radius    : 3px;
+        background-color : #fff;
+        margin           : 200px auto 0 auto;
+        width            : 400px;
+        box-shadow       : 0 1px 4px $theme-boxshadow;
+        border           : 1px solid $theme-border-color;
+    }
     
 }
