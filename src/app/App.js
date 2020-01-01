@@ -14,7 +14,6 @@ import {RouteLayout}  from "./RouteLayout";
 //layout wrappers
 import {MainLayout}   from "./components/layouts/MainLayout";
 import {SingleLayout} from "./components/layouts/SingleLayout";
-
 //pages
 import {Home}         from "./components/pages/Home";
 import {Users}        from "./components/pages/Users";

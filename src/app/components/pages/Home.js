@@ -6,52 +6,52 @@ export class Home extends React.Component {
             
                 <div className="x3_row">
                     <div className="x3_col--sm--2">
-                        <div className="card">1</div>
+                        <div className="x3_card">1</div>
                     </div>
                     <div className="x3_col--sm--2">
-                        <div className="card">2</div>
+                        <div className="x3_card">2</div>
                     </div>
                     <div className="x3_col--sm--2">
-                        <div className="card">3</div>
+                        <div className="x3_card">3</div>
                     </div>
                     <div className="x3_col--sm--2">
-                        <div className="card">4</div>
+                        <div className="x3_card">4</div>
                     </div>
                     <div className="x3_col--sm--2">
-                        <div className="card">5</div>
+                        <div className="x3_card">5</div>
                     </div>
                     <div className="x3_col--sm--2">
-                        <div className="card">6</div>
+                        <div className="x3_card">6</div>
                     </div>
                 </div>
             
                 <div className="x3_row">
                     <div className="x3_col--sm--3">
-                        <div className="card">1</div>
+                        <div className="x3_card">1</div>
                     </div>
                     <div className="x3_col--sm--3">
-                        <div className="card">2</div>
+                        <div className="x3_card">2</div>
                     </div>
                     <div className="x3_col--sm--3">
-                        <div className="card">3</div>
+                        <div className="x3_card">3</div>
                     </div>
                     <div className="x3_col--sm--3">
-                        <div className="card">4</div>
+                        <div className="x3_card">4</div>
                     </div>
                 </div>
         
                 <div className="x3_row">
                     <div className="x3_col--sm--6">
-                        <div className="card">1</div>
+                        <div className="x3_card">1</div>
                     </div>
                     <div className="x3_col--sm--6">
-                        <div className="card">2</div>
+                        <div className="x3_card">2</div>
                     </div>
                 </div>
         
                 <div className="x3_row">
                     <div className="x3_col--sm--12">
-                        <div className="card">                            
+                        <div className="x3_card">                            
                             
                             <a href="#" className="x3_btn x3_btn--primary x3_btn--xl x3_mr--2">Primary</a>
                             <a href="#" className="x3_btn x3_btn--secondary x3_btn--xl x3_mr--2">Secondary</a>
