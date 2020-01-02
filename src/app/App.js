@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 
 //router layout 
-import {RouteLayout}  from "./RouteLayout";
+import {RouteLayout}  from "./components/layouts/RouteLayout";
 
 //layout wrappers
 import {MainLayout}   from "./components/layouts/MainLayout";

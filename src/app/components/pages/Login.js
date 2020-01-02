@@ -23,31 +23,35 @@ export class Login extends React.Component {
 
     render() {
         return <div className="form__login">
-
                 <form action="/" type="post">
                     <fieldset>
+
                         <div className="x3_row x3_mb--6">
                             <div className="x3_col">
                                 <h3>Welcome</h3>
                             </div>
                         </div>
+
                         <div className="x3_form__group">
                             <label for="name">Username:</label>
-                            <input type="text" id="name" name="name" className="x3_form__field x3_form__field--xl"/>
+                            <input type="text" id="name" name="name" className="x3_form__field x3_form__field--xl"
+                            onChange={this.onChange}/>
                         </div>
 
                         <div className="x3_form__group">
                             <label for="email">Password:</label>
-                            <input type="password" id="password" name="password" className="x3_form__field x3_form__field--xl"/>
+                            <input type="password" id="password" name="password" className="x3_form__field x3_form__field--xl"
+                            onChange={this.onChange}/>
                         </div>
 
-                        <button type="submit" className="x3_btn x3_btn--primary x3_btn--xl">Login</button>
+                        <button type="submit" className="x3_btn x3_btn--primary x3_btn--xl" 
+                        onClick={this.login}>Login</button>
 
                         <a href="#" className="x3_float--right x3_mt--2">forgot password</a>               
                         
                     </fieldset>
                 </form>
-        </div>;
+            </div>;
     }
 
 }

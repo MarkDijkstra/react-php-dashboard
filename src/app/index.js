@@ -9,6 +9,6 @@ import {BrowserRouter as Router,
 
 import {App} from "./App";
 
-render(<App />, window.document.getElementById('root'));
+render(<App />, window.document.getElementById('app'));
 
 console.log('index running');
