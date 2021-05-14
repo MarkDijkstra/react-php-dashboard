@@ -1,24 +1,16 @@
-/*
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
 
--------------------------------------
-
-Project     : X3
-Filename    : _variabless.scss
-Version     : 1.2.1
-Author      : Mark Dijkstra
-Last change : --/--/----
-
--------------------------------------
-
-*/
+$x3_unit : 5px;
 
 $displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
 
 $enable-grid-classes : true !default;
-
-// Grid breakpoints
-// Define the minimum dimensions at which your layout will change,
-// adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints : (
         xs : 0,
@@ -28,9 +20,6 @@ $grid-breakpoints : (
         xl : 1200px
 ) !default;
 
-// Grid containers
-// Define the maximum width of `.container` for different screen sizes.
-
 $container-max-widths : (
         sm : 540px,
         md : 720px,
@@ -38,8 +27,11 @@ $container-max-widths : (
         xl : 1140px
 ) !default;
 
-// Grid columns
-// Set the number of columns and specify the width of the gutters.
-
 $grid-columns      : 12 !default;
 $grid-gutter-width : 30px !default;
+
+$borderradius-min : 3;
+$borderradius-max : 25;
+
+$fontsize-min : 10;
+$fontsize-max : 24;

@@ -1,108 +1,97 @@
-/*
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
 
--------------------------------------
+// Colorset @ https://flatuicolors.com/palette/nl
 
-Project     : X3
-Filename    : themeing/_colors.scss
-Version     : 1.0
-Author      : Mark Dijkstra
-Last change : --/--/----
+$x3_color--primary   : #222222;
+$x3_color--secondary : #cccccc;
 
--------------------------------------
+$x3_color--succes    : #009432;
+$x3_color--danger    : #EA2027;
+$x3_color--info      : #1289A7;
+$x3_color--alert     : #FFC312;
 
-*/
+$x3_color--cta       : #EE5A24;
 
-// Colorset @ https://flatuicolors.com/palette/se
+$x3_color--border    : #cccccc;
+$x3_color--text      : #333333;
 
-$x3-color--primary   : $theme-primary;
-$x3_color--secondary : $theme-secondary;
-
-$x3-color--succes    : $theme-notification-succes;
-$x3-color--danger    : $theme-notification-danger;
-$x3-color--info      : $theme-notification-info;
-$x3-color--alert     : $theme-notification-alert;
+$x3_color--white     : #ffffff;
+$x3_color--darkgrey  : #999999;
+$x3_color--grey      : #cccccc;
 
 .colorset--,
-.x3-colorset--{
+.x3_colorset--{
 
     &alert{
-        border           : 1px solid $x3-color--alert!important;
-        background-color : $x3-color--alert!important;
-        color            : #333!important;
+        border           : 1px solid $x3_color--alert!important;
+        background-color : $x3_color--alert!important;
+        color            : $x3_color--text!important;
     }
 
     &danger{
-        border           : 1px solid $x3-color--danger!important;
-        background-color : $x3-color--danger!important;
-        color            : #fff!important;
+        border           : 1px solid $x3_color--danger!important;
+        background-color : $x3_color--danger!important;
+        color            : $x3_color--white!important;
     }
 
     &info{
-        border           : 1px solid $x3-color--info!important;
-        background-color : $x3-color--info!important;
-        color            : #fff!important;
+        border           : 1px solid $x3_color--info!important;
+        background-color : $x3_color--info!important;
+        color            : $x3_color--white!important;
     }
 
     &succes{
-        border           : 1px solid $x3-color--succes!important;
-        background-color : $x3-color--succes!important;
-        color            : #fff!important;
+        border           : 1px solid $x3_color--succes!important;
+        background-color : $x3_color--succes!important;
+        color            : $x3_color--white!important;
     }
 
     &white{
-        border           : 1px solid #ddd!important;
-        background-color : #fff!important;
-        color            : #333!important;
+        border           : 1px solid $x3_color--border!important;
+        background-color : $x3_color--text!important;
+        color            : $x3_color--text!important;
     }
 
     &grey{
-        border           : 1px solid #bdc3c7!important;
-        background-color : #ecf0f1!important;
-        color            : #333!important;
+        border           : 1px solid $x3_color--grey!important;
+        background-color : $x3_color--grey!important;
+        color            : $x3_color--text!important;
     }
 
     &darkgrey{
-        border           : 1px solid #999!important;
-        background-color : #999!important;
-        color            : #fff!important;
+        border           : 1px solid $x3_color--darkgrey!important;
+        background-color : $x3_color--darkgrey!important;
+        color            : $x3_color--white!important;
     }
 
     &primary{
-        border           : 1px solid $x3-color--primary!important;
-        background-color : $x3-color--primary!important;
-        color            : #fff!important;
+        border           : 1px solid $x3_color--primary!important;
+        background-color : $x3_color--primary!important;
+        color            : $x3_color--white!important;
     }
 
     &secondary{
-        border           : 1px solid $x3-color--secondary!important;
-        background-color : $x3-color--secondary!important;
-        color            : #fff!important;
+        border           : 1px solid $x3_color--secondary!important;
+        background-color : $x3_color--secondary!important;
+        color            : $x3_color--white!important;
     }
 
     &cta{
-        border           : 1px solid #FD5B03!important;
-        background-color : #FD5B03!important;
-        color            : #fff!important;
+        border           : 1px solid $x3_color--cta!important;
+        background-color : $x3_color--cta!important;
+        color            : $x3_color--white!important;
     }
 
     &outline{
-        border           : 1px solid #ccc!important;
-        background-color : #fff!important;
-        color            : #333!important;
+        border           : 1px solid $x3_color--border!important;
+        background-color : $x3_color--white!important;
+        color            : $x3_color--text!important;
     }
 
 }
-
-
-//.x3_textcolor--,
-//.x3_text__color--{
-//
-//    &red {
-//        color: $x3-color--danger !important;
-//    }
-//
-//    &primary {
-//        color: $x3-color--primary !important;
-//    }
-//
-//}

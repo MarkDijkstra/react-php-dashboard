@@ -1,16 +1,10 @@
-/*
-
--------------------------------------
-
-Project     : X3
-Filename    : _text.scss
-Version     : 1.0
-Author      : Mark Dijkstra
-Last change : --/--/----
-
--------------------------------------
-
-*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
 
 .x3_text--{
 
@@ -50,11 +44,17 @@ Last change : --/--/----
 
 }
 
-.x3_fontsize--{
+.x3_fontsize{
 
-    &16{
+    @for $i from $fontsize-min through $fontsize-max {
 
-        font-size : 16px;
+        &--#{$i} {
+
+            font-size : #{$i}px!important;
+
+        }
 
     }
+
+
 }

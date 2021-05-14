@@ -1,0 +1,4258 @@
+body{
+    background-color: #ff4757;
+}
+@charset "UTF-8";
+/*
+Project     : Skeletonboard
+Filename    : core.scss
+Version     : 1.0.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+/*
+
+-------------------------------------
+
+Project     : Zolemba
+Filename    : base/_normalize.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+
+-------------------------------------
+
+*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+  outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/*
+Project     : Skeletonboard
+Filename    : _default.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+.footer-main {
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_m--0 {
+  margin: 0px !important;
+}
+
+.x3_mt--0 {
+  margin-top: 0px !important;
+}
+
+.x3_mr--0 {
+  margin-right: 0px !important;
+}
+
+.x3_mb--0 {
+  margin-bottom: 0px !important;
+}
+
+.x3_ml--0 {
+  margin-left: 0px !important;
+}
+
+.x3_mx--0 {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.x3_my--0 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.x3_p--0 {
+  padding: 0px !important;
+}
+
+.x3_pt--0 {
+  padding-top: 0px !important;
+}
+
+.x3_pr--0 {
+  padding-right: 0px !important;
+}
+
+.x3_pb--0 {
+  padding-bottom: 0px !important;
+}
+
+.x3_pl--0 {
+  padding-left: 0px !important;
+}
+
+.x3_px--0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.x3_py--0 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.x3_m--1 {
+  margin: 5px !important;
+}
+
+.x3_mt--1 {
+  margin-top: 5px !important;
+}
+
+.x3_mr--1 {
+  margin-right: 5px !important;
+}
+
+.x3_mb--1 {
+  margin-bottom: 5px !important;
+}
+
+.x3_ml--1 {
+  margin-left: 5px !important;
+}
+
+.x3_mx--1 {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.x3_my--1 {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.x3_p--1 {
+  padding: 5px !important;
+}
+
+.x3_pt--1 {
+  padding-top: 5px !important;
+}
+
+.x3_pr--1 {
+  padding-right: 5px !important;
+}
+
+.x3_pb--1 {
+  padding-bottom: 5px !important;
+}
+
+.x3_pl--1 {
+  padding-left: 5px !important;
+}
+
+.x3_px--1 {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.x3_py--1 {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.x3_m--2 {
+  margin: 10px !important;
+}
+
+.x3_mt--2 {
+  margin-top: 10px !important;
+}
+
+.x3_mr--2 {
+  margin-right: 10px !important;
+}
+
+.x3_mb--2 {
+  margin-bottom: 10px !important;
+}
+
+.x3_ml--2 {
+  margin-left: 10px !important;
+}
+
+.x3_mx--2 {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
+.x3_my--2 {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.x3_p--2 {
+  padding: 10px !important;
+}
+
+.x3_pt--2 {
+  padding-top: 10px !important;
+}
+
+.x3_pr--2 {
+  padding-right: 10px !important;
+}
+
+.x3_pb--2 {
+  padding-bottom: 10px !important;
+}
+
+.x3_pl--2 {
+  padding-left: 10px !important;
+}
+
+.x3_px--2 {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.x3_py--2 {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.x3_m--3 {
+  margin: 15px !important;
+}
+
+.x3_mt--3 {
+  margin-top: 15px !important;
+}
+
+.x3_mr--3 {
+  margin-right: 15px !important;
+}
+
+.x3_mb--3 {
+  margin-bottom: 15px !important;
+}
+
+.x3_ml--3 {
+  margin-left: 15px !important;
+}
+
+.x3_mx--3 {
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+
+.x3_my--3 {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+
+.x3_p--3 {
+  padding: 15px !important;
+}
+
+.x3_pt--3 {
+  padding-top: 15px !important;
+}
+
+.x3_pr--3 {
+  padding-right: 15px !important;
+}
+
+.x3_pb--3 {
+  padding-bottom: 15px !important;
+}
+
+.x3_pl--3 {
+  padding-left: 15px !important;
+}
+
+.x3_px--3 {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.x3_py--3 {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+.x3_m--4 {
+  margin: 20px !important;
+}
+
+.x3_mt--4 {
+  margin-top: 20px !important;
+}
+
+.x3_mr--4 {
+  margin-right: 20px !important;
+}
+
+.x3_mb--4 {
+  margin-bottom: 20px !important;
+}
+
+.x3_ml--4 {
+  margin-left: 20px !important;
+}
+
+.x3_mx--4 {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+
+.x3_my--4 {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.x3_p--4 {
+  padding: 20px !important;
+}
+
+.x3_pt--4 {
+  padding-top: 20px !important;
+}
+
+.x3_pr--4 {
+  padding-right: 20px !important;
+}
+
+.x3_pb--4 {
+  padding-bottom: 20px !important;
+}
+
+.x3_pl--4 {
+  padding-left: 20px !important;
+}
+
+.x3_px--4 {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.x3_py--4 {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.x3_m--5 {
+  margin: 25px !important;
+}
+
+.x3_mt--5 {
+  margin-top: 25px !important;
+}
+
+.x3_mr--5 {
+  margin-right: 25px !important;
+}
+
+.x3_mb--5 {
+  margin-bottom: 25px !important;
+}
+
+.x3_ml--5 {
+  margin-left: 25px !important;
+}
+
+.x3_mx--5 {
+  margin-left: 25px !important;
+  margin-right: 25px !important;
+}
+
+.x3_my--5 {
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
+}
+
+.x3_p--5 {
+  padding: 25px !important;
+}
+
+.x3_pt--5 {
+  padding-top: 25px !important;
+}
+
+.x3_pr--5 {
+  padding-right: 25px !important;
+}
+
+.x3_pb--5 {
+  padding-bottom: 25px !important;
+}
+
+.x3_pl--5 {
+  padding-left: 25px !important;
+}
+
+.x3_px--5 {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+
+.x3_py--5 {
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
+}
+
+.x3_m--6 {
+  margin: 30px !important;
+}
+
+.x3_mt--6 {
+  margin-top: 30px !important;
+}
+
+.x3_mr--6 {
+  margin-right: 30px !important;
+}
+
+.x3_mb--6 {
+  margin-bottom: 30px !important;
+}
+
+.x3_ml--6 {
+  margin-left: 30px !important;
+}
+
+.x3_mx--6 {
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+}
+
+.x3_my--6 {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+.x3_p--6 {
+  padding: 30px !important;
+}
+
+.x3_pt--6 {
+  padding-top: 30px !important;
+}
+
+.x3_pr--6 {
+  padding-right: 30px !important;
+}
+
+.x3_pb--6 {
+  padding-bottom: 30px !important;
+}
+
+.x3_pl--6 {
+  padding-left: 30px !important;
+}
+
+.x3_px--6 {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+
+.x3_py--6 {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+
+.x3_m--7 {
+  margin: 35px !important;
+}
+
+.x3_mt--7 {
+  margin-top: 35px !important;
+}
+
+.x3_mr--7 {
+  margin-right: 35px !important;
+}
+
+.x3_mb--7 {
+  margin-bottom: 35px !important;
+}
+
+.x3_ml--7 {
+  margin-left: 35px !important;
+}
+
+.x3_mx--7 {
+  margin-left: 35px !important;
+  margin-right: 35px !important;
+}
+
+.x3_my--7 {
+  margin-top: 35px !important;
+  margin-bottom: 35px !important;
+}
+
+.x3_p--7 {
+  padding: 35px !important;
+}
+
+.x3_pt--7 {
+  padding-top: 35px !important;
+}
+
+.x3_pr--7 {
+  padding-right: 35px !important;
+}
+
+.x3_pb--7 {
+  padding-bottom: 35px !important;
+}
+
+.x3_pl--7 {
+  padding-left: 35px !important;
+}
+
+.x3_px--7 {
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+}
+
+.x3_py--7 {
+  padding-top: 35px !important;
+  padding-bottom: 35px !important;
+}
+
+.x3_m--8 {
+  margin: 40px !important;
+}
+
+.x3_mt--8 {
+  margin-top: 40px !important;
+}
+
+.x3_mr--8 {
+  margin-right: 40px !important;
+}
+
+.x3_mb--8 {
+  margin-bottom: 40px !important;
+}
+
+.x3_ml--8 {
+  margin-left: 40px !important;
+}
+
+.x3_mx--8 {
+  margin-left: 40px !important;
+  margin-right: 40px !important;
+}
+
+.x3_my--8 {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+.x3_p--8 {
+  padding: 40px !important;
+}
+
+.x3_pt--8 {
+  padding-top: 40px !important;
+}
+
+.x3_pr--8 {
+  padding-right: 40px !important;
+}
+
+.x3_pb--8 {
+  padding-bottom: 40px !important;
+}
+
+.x3_pl--8 {
+  padding-left: 40px !important;
+}
+
+.x3_px--8 {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.x3_py--8 {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+.x3_m--9 {
+  margin: 45px !important;
+}
+
+.x3_mt--9 {
+  margin-top: 45px !important;
+}
+
+.x3_mr--9 {
+  margin-right: 45px !important;
+}
+
+.x3_mb--9 {
+  margin-bottom: 45px !important;
+}
+
+.x3_ml--9 {
+  margin-left: 45px !important;
+}
+
+.x3_mx--9 {
+  margin-left: 45px !important;
+  margin-right: 45px !important;
+}
+
+.x3_my--9 {
+  margin-top: 45px !important;
+  margin-bottom: 45px !important;
+}
+
+.x3_p--9 {
+  padding: 45px !important;
+}
+
+.x3_pt--9 {
+  padding-top: 45px !important;
+}
+
+.x3_pr--9 {
+  padding-right: 45px !important;
+}
+
+.x3_pb--9 {
+  padding-bottom: 45px !important;
+}
+
+.x3_pl--9 {
+  padding-left: 45px !important;
+}
+
+.x3_px--9 {
+  padding-left: 45px !important;
+  padding-right: 45px !important;
+}
+
+.x3_py--9 {
+  padding-top: 45px !important;
+  padding-bottom: 45px !important;
+}
+
+.x3_m--10 {
+  margin: 50px !important;
+}
+
+.x3_mt--10 {
+  margin-top: 50px !important;
+}
+
+.x3_mr--10 {
+  margin-right: 50px !important;
+}
+
+.x3_mb--10 {
+  margin-bottom: 50px !important;
+}
+
+.x3_ml--10 {
+  margin-left: 50px !important;
+}
+
+.x3_mx--10 {
+  margin-left: 50px !important;
+  margin-right: 50px !important;
+}
+
+.x3_my--10 {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+.x3_p--10 {
+  padding: 50px !important;
+}
+
+.x3_pt--10 {
+  padding-top: 50px !important;
+}
+
+.x3_pr--10 {
+  padding-right: 50px !important;
+}
+
+.x3_pb--10 {
+  padding-bottom: 50px !important;
+}
+
+.x3_pl--10 {
+  padding-left: 50px !important;
+}
+
+.x3_px--10 {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.x3_py--10 {
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.x3_m--11 {
+  margin: 55px !important;
+}
+
+.x3_mt--11 {
+  margin-top: 55px !important;
+}
+
+.x3_mr--11 {
+  margin-right: 55px !important;
+}
+
+.x3_mb--11 {
+  margin-bottom: 55px !important;
+}
+
+.x3_ml--11 {
+  margin-left: 55px !important;
+}
+
+.x3_mx--11 {
+  margin-left: 55px !important;
+  margin-right: 55px !important;
+}
+
+.x3_my--11 {
+  margin-top: 55px !important;
+  margin-bottom: 55px !important;
+}
+
+.x3_p--11 {
+  padding: 55px !important;
+}
+
+.x3_pt--11 {
+  padding-top: 55px !important;
+}
+
+.x3_pr--11 {
+  padding-right: 55px !important;
+}
+
+.x3_pb--11 {
+  padding-bottom: 55px !important;
+}
+
+.x3_pl--11 {
+  padding-left: 55px !important;
+}
+
+.x3_px--11 {
+  padding-left: 55px !important;
+  padding-right: 55px !important;
+}
+
+.x3_py--11 {
+  padding-top: 55px !important;
+  padding-bottom: 55px !important;
+}
+
+.x3_m--12 {
+  margin: 60px !important;
+}
+
+.x3_mt--12 {
+  margin-top: 60px !important;
+}
+
+.x3_mr--12 {
+  margin-right: 60px !important;
+}
+
+.x3_mb--12 {
+  margin-bottom: 60px !important;
+}
+
+.x3_ml--12 {
+  margin-left: 60px !important;
+}
+
+.x3_mx--12 {
+  margin-left: 60px !important;
+  margin-right: 60px !important;
+}
+
+.x3_my--12 {
+  margin-top: 60px !important;
+  margin-bottom: 60px !important;
+}
+
+.x3_p--12 {
+  padding: 60px !important;
+}
+
+.x3_pt--12 {
+  padding-top: 60px !important;
+}
+
+.x3_pr--12 {
+  padding-right: 60px !important;
+}
+
+.x3_pb--12 {
+  padding-bottom: 60px !important;
+}
+
+.x3_pl--12 {
+  padding-left: 60px !important;
+}
+
+.x3_px--12 {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+.x3_py--12 {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+}
+
+.x3_m--13 {
+  margin: 65px !important;
+}
+
+.x3_mt--13 {
+  margin-top: 65px !important;
+}
+
+.x3_mr--13 {
+  margin-right: 65px !important;
+}
+
+.x3_mb--13 {
+  margin-bottom: 65px !important;
+}
+
+.x3_ml--13 {
+  margin-left: 65px !important;
+}
+
+.x3_mx--13 {
+  margin-left: 65px !important;
+  margin-right: 65px !important;
+}
+
+.x3_my--13 {
+  margin-top: 65px !important;
+  margin-bottom: 65px !important;
+}
+
+.x3_p--13 {
+  padding: 65px !important;
+}
+
+.x3_pt--13 {
+  padding-top: 65px !important;
+}
+
+.x3_pr--13 {
+  padding-right: 65px !important;
+}
+
+.x3_pb--13 {
+  padding-bottom: 65px !important;
+}
+
+.x3_pl--13 {
+  padding-left: 65px !important;
+}
+
+.x3_px--13 {
+  padding-left: 65px !important;
+  padding-right: 65px !important;
+}
+
+.x3_py--13 {
+  padding-top: 65px !important;
+  padding-bottom: 65px !important;
+}
+
+.x3_m--14 {
+  margin: 70px !important;
+}
+
+.x3_mt--14 {
+  margin-top: 70px !important;
+}
+
+.x3_mr--14 {
+  margin-right: 70px !important;
+}
+
+.x3_mb--14 {
+  margin-bottom: 70px !important;
+}
+
+.x3_ml--14 {
+  margin-left: 70px !important;
+}
+
+.x3_mx--14 {
+  margin-left: 70px !important;
+  margin-right: 70px !important;
+}
+
+.x3_my--14 {
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
+}
+
+.x3_p--14 {
+  padding: 70px !important;
+}
+
+.x3_pt--14 {
+  padding-top: 70px !important;
+}
+
+.x3_pr--14 {
+  padding-right: 70px !important;
+}
+
+.x3_pb--14 {
+  padding-bottom: 70px !important;
+}
+
+.x3_pl--14 {
+  padding-left: 70px !important;
+}
+
+.x3_px--14 {
+  padding-left: 70px !important;
+  padding-right: 70px !important;
+}
+
+.x3_py--14 {
+  padding-top: 70px !important;
+  padding-bottom: 70px !important;
+}
+
+.x3_m--15 {
+  margin: 75px !important;
+}
+
+.x3_mt--15 {
+  margin-top: 75px !important;
+}
+
+.x3_mr--15 {
+  margin-right: 75px !important;
+}
+
+.x3_mb--15 {
+  margin-bottom: 75px !important;
+}
+
+.x3_ml--15 {
+  margin-left: 75px !important;
+}
+
+.x3_mx--15 {
+  margin-left: 75px !important;
+  margin-right: 75px !important;
+}
+
+.x3_my--15 {
+  margin-top: 75px !important;
+  margin-bottom: 75px !important;
+}
+
+.x3_p--15 {
+  padding: 75px !important;
+}
+
+.x3_pt--15 {
+  padding-top: 75px !important;
+}
+
+.x3_pr--15 {
+  padding-right: 75px !important;
+}
+
+.x3_pb--15 {
+  padding-bottom: 75px !important;
+}
+
+.x3_pl--15 {
+  padding-left: 75px !important;
+}
+
+.x3_px--15 {
+  padding-left: 75px !important;
+  padding-right: 75px !important;
+}
+
+.x3_py--15 {
+  padding-top: 75px !important;
+  padding-bottom: 75px !important;
+}
+
+.x3_m--16 {
+  margin: 80px !important;
+}
+
+.x3_mt--16 {
+  margin-top: 80px !important;
+}
+
+.x3_mr--16 {
+  margin-right: 80px !important;
+}
+
+.x3_mb--16 {
+  margin-bottom: 80px !important;
+}
+
+.x3_ml--16 {
+  margin-left: 80px !important;
+}
+
+.x3_mx--16 {
+  margin-left: 80px !important;
+  margin-right: 80px !important;
+}
+
+.x3_my--16 {
+  margin-top: 80px !important;
+  margin-bottom: 80px !important;
+}
+
+.x3_p--16 {
+  padding: 80px !important;
+}
+
+.x3_pt--16 {
+  padding-top: 80px !important;
+}
+
+.x3_pr--16 {
+  padding-right: 80px !important;
+}
+
+.x3_pb--16 {
+  padding-bottom: 80px !important;
+}
+
+.x3_pl--16 {
+  padding-left: 80px !important;
+}
+
+.x3_px--16 {
+  padding-left: 80px !important;
+  padding-right: 80px !important;
+}
+
+.x3_py--16 {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+
+.x3_m--17 {
+  margin: 85px !important;
+}
+
+.x3_mt--17 {
+  margin-top: 85px !important;
+}
+
+.x3_mr--17 {
+  margin-right: 85px !important;
+}
+
+.x3_mb--17 {
+  margin-bottom: 85px !important;
+}
+
+.x3_ml--17 {
+  margin-left: 85px !important;
+}
+
+.x3_mx--17 {
+  margin-left: 85px !important;
+  margin-right: 85px !important;
+}
+
+.x3_my--17 {
+  margin-top: 85px !important;
+  margin-bottom: 85px !important;
+}
+
+.x3_p--17 {
+  padding: 85px !important;
+}
+
+.x3_pt--17 {
+  padding-top: 85px !important;
+}
+
+.x3_pr--17 {
+  padding-right: 85px !important;
+}
+
+.x3_pb--17 {
+  padding-bottom: 85px !important;
+}
+
+.x3_pl--17 {
+  padding-left: 85px !important;
+}
+
+.x3_px--17 {
+  padding-left: 85px !important;
+  padding-right: 85px !important;
+}
+
+.x3_py--17 {
+  padding-top: 85px !important;
+  padding-bottom: 85px !important;
+}
+
+.x3_m--18 {
+  margin: 90px !important;
+}
+
+.x3_mt--18 {
+  margin-top: 90px !important;
+}
+
+.x3_mr--18 {
+  margin-right: 90px !important;
+}
+
+.x3_mb--18 {
+  margin-bottom: 90px !important;
+}
+
+.x3_ml--18 {
+  margin-left: 90px !important;
+}
+
+.x3_mx--18 {
+  margin-left: 90px !important;
+  margin-right: 90px !important;
+}
+
+.x3_my--18 {
+  margin-top: 90px !important;
+  margin-bottom: 90px !important;
+}
+
+.x3_p--18 {
+  padding: 90px !important;
+}
+
+.x3_pt--18 {
+  padding-top: 90px !important;
+}
+
+.x3_pr--18 {
+  padding-right: 90px !important;
+}
+
+.x3_pb--18 {
+  padding-bottom: 90px !important;
+}
+
+.x3_pl--18 {
+  padding-left: 90px !important;
+}
+
+.x3_px--18 {
+  padding-left: 90px !important;
+  padding-right: 90px !important;
+}
+
+.x3_py--18 {
+  padding-top: 90px !important;
+  padding-bottom: 90px !important;
+}
+
+.x3_m--19 {
+  margin: 95px !important;
+}
+
+.x3_mt--19 {
+  margin-top: 95px !important;
+}
+
+.x3_mr--19 {
+  margin-right: 95px !important;
+}
+
+.x3_mb--19 {
+  margin-bottom: 95px !important;
+}
+
+.x3_ml--19 {
+  margin-left: 95px !important;
+}
+
+.x3_mx--19 {
+  margin-left: 95px !important;
+  margin-right: 95px !important;
+}
+
+.x3_my--19 {
+  margin-top: 95px !important;
+  margin-bottom: 95px !important;
+}
+
+.x3_p--19 {
+  padding: 95px !important;
+}
+
+.x3_pt--19 {
+  padding-top: 95px !important;
+}
+
+.x3_pr--19 {
+  padding-right: 95px !important;
+}
+
+.x3_pb--19 {
+  padding-bottom: 95px !important;
+}
+
+.x3_pl--19 {
+  padding-left: 95px !important;
+}
+
+.x3_px--19 {
+  padding-left: 95px !important;
+  padding-right: 95px !important;
+}
+
+.x3_py--19 {
+  padding-top: 95px !important;
+  padding-bottom: 95px !important;
+}
+
+.x3_m--20 {
+  margin: 100px !important;
+}
+
+.x3_mt--20 {
+  margin-top: 100px !important;
+}
+
+.x3_mr--20 {
+  margin-right: 100px !important;
+}
+
+.x3_mb--20 {
+  margin-bottom: 100px !important;
+}
+
+.x3_ml--20 {
+  margin-left: 100px !important;
+}
+
+.x3_mx--20 {
+  margin-left: 100px !important;
+  margin-right: 100px !important;
+}
+
+.x3_my--20 {
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
+}
+
+.x3_p--20 {
+  padding: 100px !important;
+}
+
+.x3_pt--20 {
+  padding-top: 100px !important;
+}
+
+.x3_pr--20 {
+  padding-right: 100px !important;
+}
+
+.x3_pb--20 {
+  padding-bottom: 100px !important;
+}
+
+.x3_pl--20 {
+  padding-left: 100px !important;
+}
+
+.x3_px--20 {
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+
+.x3_py--20 {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+
+.x3_mr--3--min {
+  margin-right: -15px !important;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_float--left {
+  float: left !important;
+}
+.x3_float--right {
+  float: right !important;
+}
+
+.x3_position--relative {
+  position: relative;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_text--capitalize, .x3_text--uppercase {
+  text-transform: uppercase !important;
+}
+.x3_text--bold {
+  font-family: "OpenSansBold" !important;
+  font-weight: bold !important;
+}
+.x3_text--italic {
+  font-style: italic !important;
+}
+.x3_text--underline {
+  text-decoration: underline !important;
+}
+.x3_text--right {
+  text-align: right !important;
+}
+.x3_text--left {
+  text-align: left !important;
+}
+.x3_text--center {
+  text-align: center !important;
+}
+.x3_text--faded {
+  opacity: 0.5;
+}
+
+.x3_fontsize--10 {
+  font-size: 10px !important;
+}
+.x3_fontsize--11 {
+  font-size: 11px !important;
+}
+.x3_fontsize--12 {
+  font-size: 12px !important;
+}
+.x3_fontsize--13 {
+  font-size: 13px !important;
+}
+.x3_fontsize--14 {
+  font-size: 14px !important;
+}
+.x3_fontsize--15 {
+  font-size: 15px !important;
+}
+.x3_fontsize--16 {
+  font-size: 16px !important;
+}
+.x3_fontsize--17 {
+  font-size: 17px !important;
+}
+.x3_fontsize--18 {
+  font-size: 18px !important;
+}
+.x3_fontsize--19 {
+  font-size: 19px !important;
+}
+.x3_fontsize--20 {
+  font-size: 20px !important;
+}
+.x3_fontsize--21 {
+  font-size: 21px !important;
+}
+.x3_fontsize--22 {
+  font-size: 22px !important;
+}
+.x3_fontsize--23 {
+  font-size: 23px !important;
+}
+.x3_fontsize--24 {
+  font-size: 24px !important;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.x3_display--block {
+  display: block !important;
+  width: 100% !important;
+  clear: both !important;
+}
+.x3_display--none {
+  display: none !important;
+}
+.x3_display--flex {
+  display: flex;
+}
+.x3_display--table {
+  display: table;
+}
+
+.x3_display--none {
+  display: none !important;
+}
+
+.x3_display--inline {
+  display: inline !important;
+}
+
+.x3_display--inline-block {
+  display: inline-block !important;
+}
+
+.x3_display--block {
+  display: block !important;
+}
+
+.x3_display--table {
+  display: table !important;
+}
+
+.x3_display--table-row {
+  display: table-row !important;
+}
+
+.x3_display--table-cell {
+  display: table-cell !important;
+}
+
+.x3_display--flex {
+  display: flex !important;
+}
+
+.x3_display--inline-flex {
+  display: inline-flex !important;
+}
+
+@media (min-width: 576px) {
+  .x3_display--sm--none {
+    display: none !important;
+  }
+
+  .x3_display--sm--inline {
+    display: inline !important;
+  }
+
+  .x3_display--sm--inline-block {
+    display: inline-block !important;
+  }
+
+  .x3_display--sm--block {
+    display: block !important;
+  }
+
+  .x3_display--sm--table {
+    display: table !important;
+  }
+
+  .x3_display--sm--table-row {
+    display: table-row !important;
+  }
+
+  .x3_display--sm--table-cell {
+    display: table-cell !important;
+  }
+
+  .x3_display--sm--flex {
+    display: flex !important;
+  }
+
+  .x3_display--sm--inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 768px) {
+  .x3_display--md--none {
+    display: none !important;
+  }
+
+  .x3_display--md--inline {
+    display: inline !important;
+  }
+
+  .x3_display--md--inline-block {
+    display: inline-block !important;
+  }
+
+  .x3_display--md--block {
+    display: block !important;
+  }
+
+  .x3_display--md--table {
+    display: table !important;
+  }
+
+  .x3_display--md--table-row {
+    display: table-row !important;
+  }
+
+  .x3_display--md--table-cell {
+    display: table-cell !important;
+  }
+
+  .x3_display--md--flex {
+    display: flex !important;
+  }
+
+  .x3_display--md--inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 992px) {
+  .x3_display--lg--none {
+    display: none !important;
+  }
+
+  .x3_display--lg--inline {
+    display: inline !important;
+  }
+
+  .x3_display--lg--inline-block {
+    display: inline-block !important;
+  }
+
+  .x3_display--lg--block {
+    display: block !important;
+  }
+
+  .x3_display--lg--table {
+    display: table !important;
+  }
+
+  .x3_display--lg--table-row {
+    display: table-row !important;
+  }
+
+  .x3_display--lg--table-cell {
+    display: table-cell !important;
+  }
+
+  .x3_display--lg--flex {
+    display: flex !important;
+  }
+
+  .x3_display--lg--inline-flex {
+    display: inline-flex !important;
+  }
+}
+@media (min-width: 1200px) {
+  .x3_display--xl--none {
+    display: none !important;
+  }
+
+  .x3_display--xl--inline {
+    display: inline !important;
+  }
+
+  .x3_display--xl--inline-block {
+    display: inline-block !important;
+  }
+
+  .x3_display--xl--block {
+    display: block !important;
+  }
+
+  .x3_display--xl--table {
+    display: table !important;
+  }
+
+  .x3_display--xl--table-row {
+    display: table-row !important;
+  }
+
+  .x3_display--xl--table-cell {
+    display: table-cell !important;
+  }
+
+  .x3_display--xl--flex {
+    display: flex !important;
+  }
+
+  .x3_display--xl--inline-flex {
+    display: inline-flex !important;
+  }
+}
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_list--none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_overflow--hidden {
+  overflow: hidden !important;
+}
+.x3_overflow--hidden--x {
+  overflow-x: hidden !important;
+}
+.x3_overflow--hidden--y {
+  overflow-y: hidden !important;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_r--3,
+.x3_borderradius--3 {
+  border-radius: 3px !important;
+}
+.x3_r--4,
+.x3_borderradius--4 {
+  border-radius: 4px !important;
+}
+.x3_r--5,
+.x3_borderradius--5 {
+  border-radius: 5px !important;
+}
+.x3_r--6,
+.x3_borderradius--6 {
+  border-radius: 6px !important;
+}
+.x3_r--7,
+.x3_borderradius--7 {
+  border-radius: 7px !important;
+}
+.x3_r--8,
+.x3_borderradius--8 {
+  border-radius: 8px !important;
+}
+.x3_r--9,
+.x3_borderradius--9 {
+  border-radius: 9px !important;
+}
+.x3_r--10,
+.x3_borderradius--10 {
+  border-radius: 10px !important;
+}
+.x3_r--11,
+.x3_borderradius--11 {
+  border-radius: 11px !important;
+}
+.x3_r--12,
+.x3_borderradius--12 {
+  border-radius: 12px !important;
+}
+.x3_r--13,
+.x3_borderradius--13 {
+  border-radius: 13px !important;
+}
+.x3_r--14,
+.x3_borderradius--14 {
+  border-radius: 14px !important;
+}
+.x3_r--15,
+.x3_borderradius--15 {
+  border-radius: 15px !important;
+}
+.x3_r--16,
+.x3_borderradius--16 {
+  border-radius: 16px !important;
+}
+.x3_r--17,
+.x3_borderradius--17 {
+  border-radius: 17px !important;
+}
+.x3_r--18,
+.x3_borderradius--18 {
+  border-radius: 18px !important;
+}
+.x3_r--19,
+.x3_borderradius--19 {
+  border-radius: 19px !important;
+}
+.x3_r--20,
+.x3_borderradius--20 {
+  border-radius: 20px !important;
+}
+.x3_r--21,
+.x3_borderradius--21 {
+  border-radius: 21px !important;
+}
+.x3_r--22,
+.x3_borderradius--22 {
+  border-radius: 22px !important;
+}
+.x3_r--23,
+.x3_borderradius--23 {
+  border-radius: 23px !important;
+}
+.x3_r--24,
+.x3_borderradius--24 {
+  border-radius: 24px !important;
+}
+.x3_r--25,
+.x3_borderradius--25 {
+  border-radius: 25px !important;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.colorset--alert,
+.x3_colorset--alert,
+.x3_btn--alert,
+.x3_btn--alert:focus,
+.x3_btn--alert:hover {
+  border: 1px solid #FFC312 !important;
+  background-color: #FFC312 !important;
+  color: #333333 !important;
+}
+.colorset--danger,
+.x3_colorset--danger,
+.x3_btn--danger,
+.x3_btn--danger:focus,
+.x3_btn--danger:hover {
+  border: 1px solid #EA2027 !important;
+  background-color: #EA2027 !important;
+  color: #ffffff !important;
+}
+.colorset--info,
+.x3_colorset--info,
+.x3_btn--info,
+.x3_btn--info:focus,
+.x3_btn--info:hover {
+  border: 1px solid #1289A7 !important;
+  background-color: #1289A7 !important;
+  color: #ffffff !important;
+}
+.colorset--succes,
+.x3_colorset--succes,
+.x3_btn--succes,
+.x3_btn--succes:focus,
+.x3_btn--succes:hover {
+  border: 1px solid #009432 !important;
+  background-color: #009432 !important;
+  color: #ffffff !important;
+}
+.colorset--white,
+.x3_colorset--white {
+  border: 1px solid #cccccc !important;
+  background-color: #333333 !important;
+  color: #333333 !important;
+}
+.colorset--grey,
+.x3_colorset--grey,
+.x3_btn--grey,
+.x3_btn--grey:focus,
+.x3_btn--grey:hover {
+  border: 1px solid #cccccc !important;
+  background-color: #cccccc !important;
+  color: #333333 !important;
+}
+.colorset--darkgrey,
+.x3_colorset--darkgrey {
+  border: 1px solid #999999 !important;
+  background-color: #999999 !important;
+  color: #ffffff !important;
+}
+.colorset--primary,
+.x3_colorset--primary,
+.x3_btn--primary,
+.x3_btn--primary:focus,
+.x3_btn--primary:hover {
+  border: 1px solid #222222 !important;
+  background-color: #222222 !important;
+  color: #ffffff !important;
+}
+.colorset--secondary,
+.x3_colorset--secondary,
+.x3_btn--secondary,
+.x3_btn--secondary:focus,
+.x3_btn--secondary:hover,
+.x3_btn--darkblue,
+.x3_btn--darkblue:focus,
+.x3_btn--darkblue:hover {
+  border: 1px solid #cccccc !important;
+  background-color: #cccccc !important;
+  color: #ffffff !important;
+}
+.colorset--cta,
+.x3_colorset--cta,
+.x3_btn--cta,
+.x3_btn--cta:focus,
+.x3_btn--cta:hover {
+  border: 1px solid #EE5A24 !important;
+  background-color: #EE5A24 !important;
+  color: #ffffff !important;
+}
+.colorset--outline,
+.x3_colorset--outline {
+  border: 1px solid #cccccc !important;
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
+.x3_btn {
+  border-radius: 4px;
+  padding: 7px 25px 8px 25px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  background-color: #cccccc;
+  transition: opacity 0.15s linear;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+}
+.x3_btn.x3_float--right {
+  margin-right: 0;
+}
+.x3_btn, .x3_btn:hover, .x3_btn:focus {
+  text-decoration: none;
+  outline-color: transparent;
+  outline-style: none;
+}
+.x3_btn:hover {
+  opacity: 0.8;
+  transition: opacity 0.15s linear;
+  text-decoration: none;
+}
+.x3_btn .fa,
+.x3_btn .fas,
+.x3_btn .far {
+  margin-right: 10px;
+}
+.x3_btn--icon, .x3_btn--fa {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  padding: 0 !important;
+}
+.x3_btn--icon > i, .x3_btn--fa > i {
+  margin: 0 !important;
+}
+.x3_btn--icon.x3_btn--xl, .x3_btn--fa.x3_btn--xl {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+.x3_btn--xl {
+  padding: 10px 25px 12px 25px;
+  font-size: 14px;
+}
+.x3_btn--sm {
+  padding: 3px 10px;
+  font-size: 12px;
+}
+.x3_btn--link {
+  background-color: transparent;
+  border-color: transparent;
+  color: #222222;
+}
+.x3_btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.x3_btn__loading {
+  pointer-events: none;
+  position: relative;
+  padding-right: 40px;
+  opacity: 0.8;
+  transition: padding-right 4s linear;
+}
+.x3_btn__loading:after {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  content: "";
+  font-size: 18px;
+  font-family: "Font Awesome 5 Free";
+  animation: spin 2s linear infinite;
+}
+.x3_btndisabled {
+  opacity: 0.6;
+  background-color: #999999 !important;
+  cursor: default !important;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*
+
+-------------------------------------
+
+Project     : X3
+Filename    : components/_forms.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+
+-------------------------------------
+
+*/
+label {
+  position: relative;
+}
+
+[readonly] {
+  background-color: #dddddd;
+}
+
+.x3_form__select, .x3_form__textarea, .x3_form__field {
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  padding: 8px 15px;
+  margin: 0;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  color: #000;
+}
+.x3_form__select[readonly], .x3_form__textarea[readonly], .x3_form__field[readonly] {
+  background-color: #dddddd;
+}
+.x3_form__select--error, .x3_form__select.field--error, .x3_form__textarea--error, .x3_form__textarea.field--error, .x3_form__field--error, .x3_form__field.field--error {
+  border-color: red;
+  color: red;
+}
+.x3_form__field--xl {
+  padding: 11px 15px;
+}
+.x3_form__textarea {
+  height: 120px;
+}
+.x3_form__select {
+  height: 40px !important;
+}
+.x3_form__group {
+  margin-bottom: 20px;
+}
+.x3_form__group label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+  clear: both;
+}
+
+.x3_number__field {
+  position: relative;
+}
+.x3_number__field [data-stepper] {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 20px;
+  font-size: 11px;
+  border: 1px solid #cccccc;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 0 4px 0 0;
+}
+.x3_number__field [data-stepper=down] {
+  top: 20px;
+  border-radius: 0 0 4px 0;
+}
+.x3_number__field input[type=number]::-webkit-inner-spin-button,
+.x3_number__field input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.x3_number__field input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.x3_field__checkbox {
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.x3_field__checkbox [type=checkbox] {
+  display: none;
+}
+.x3_field__checkbox [type=checkbox] + span:before {
+  content: "✔";
+  position: absolute;
+  text-align: center;
+  top: -2px;
+  left: -2px;
+  line-height: 18px;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  font-weight: bold;
+}
+.x3_field__checkbox [type=checkbox] + span {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  z-index: 1;
+  border: 2px solid #333;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+}
+.x3_field__checkbox [type=checkbox]:checked + span:before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.x3_field__checkbox--reversed {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.x3_field__checkbox--reversed [type=checkbox] + span {
+  left: auto;
+  right: 0;
+}
+
+/*
+
+-------------------------------------
+
+Project     : X3
+Filename    : _cards.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+
+-------------------------------------
+
+*/
+.x3_card {
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/*
+
+-------------------------------------
+
+Project     : X3
+Filename    : layout/_grid.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+
+-------------------------------------
+
+*/
+.x3_container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .x3_container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .x3_container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .x3_container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .x3_container {
+    max-width: 1140px;
+  }
+}
+
+.x3_container--fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.x3_row {
+  display: flex;
+  flex-wrap: wrap;
+  clear: both;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.x3_no--gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.x3_no--gutters > .x3_col,
+.x3_no--gutters > [class*=x3_col--] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.x3_gutter--10 {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.x3_col--xl,
+.x3_col--xl--auto, .x3_col--xl--12, .x3_col--xl--11, .x3_col--xl--10, .x3_col--xl--9, .x3_col--xl--8, .x3_col--xl--7, .x3_col--xl--6, .x3_col--xl--5, .x3_col--xl--4, .x3_col--xl--3, .x3_col--xl--2, .x3_col--xl--1, .x3_col--lg,
+.x3_col--lg--auto, .x3_col--lg--12, .x3_col--lg--11, .x3_col--lg--10, .x3_col--lg--9, .x3_col--lg--8, .x3_col--lg--7, .x3_col--lg--6, .x3_col--lg--5, .x3_col--lg--4, .x3_col--lg--3, .x3_col--lg--2, .x3_col--lg--1, .x3_col--md,
+.x3_col--md--auto, .x3_col--md--12, .x3_col--md--11, .x3_col--md--10, .x3_col--md--9, .x3_col--md--8, .x3_col--md--7, .x3_col--md--6, .x3_col--md--5, .x3_col--md--4, .x3_col--md--3, .x3_col--md--2, .x3_col--md--1, .x3_col--sm,
+.x3_col--sm--auto, .x3_col--sm--12, .x3_col--sm--11, .x3_col--sm--10, .x3_col--sm--9, .x3_col--sm--8, .x3_col--sm--7, .x3_col--sm--6, .x3_col--sm--5, .x3_col--sm--4, .x3_col--sm--3, .x3_col--sm--2, .x3_col--sm--1, .x3_col,
+.x3_col--auto, .x3_col--12, .x3_col--11, .x3_col--10, .x3_col--9, .x3_col--8, .x3_col--7, .x3_col--6, .x3_col--5, .x3_col--4, .x3_col--3, .x3_col--2, .x3_col--1 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.x3_col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.x3_col--auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
+
+.x3_col--1 {
+  flex: 0 0 8.3333333333%;
+  max-width: 8.3333333333%;
+}
+
+.x3_col--2 {
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+}
+
+.x3_col--3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.x3_col--4 {
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+}
+
+.x3_col--5 {
+  flex: 0 0 41.6666666667%;
+  max-width: 41.6666666667%;
+}
+
+.x3_col--6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.x3_col--7 {
+  flex: 0 0 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+
+.x3_col--8 {
+  flex: 0 0 66.6666666667%;
+  max-width: 66.6666666667%;
+}
+
+.x3_col--9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.x3_col--10 {
+  flex: 0 0 83.3333333333%;
+  max-width: 83.3333333333%;
+}
+
+.x3_col--11 {
+  flex: 0 0 91.6666666667%;
+  max-width: 91.6666666667%;
+}
+
+.x3_col--12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.x3_order--first {
+  order: -1;
+}
+
+.x3_order--last {
+  order: 13;
+}
+
+.x3_order--0 {
+  order: 0;
+}
+
+.x3_order--1 {
+  order: 1;
+}
+
+.x3_order--2 {
+  order: 2;
+}
+
+.x3_order--3 {
+  order: 3;
+}
+
+.x3_order--4 {
+  order: 4;
+}
+
+.x3_order--5 {
+  order: 5;
+}
+
+.x3_order--6 {
+  order: 6;
+}
+
+.x3_order--7 {
+  order: 7;
+}
+
+.x3_order--8 {
+  order: 8;
+}
+
+.x3_order--9 {
+  order: 9;
+}
+
+.x3_order--10 {
+  order: 10;
+}
+
+.x3_order--11 {
+  order: 11;
+}
+
+.x3_order--12 {
+  order: 12;
+}
+
+.x3_col--push--0 {
+  left: 0%;
+}
+
+.x3_col--push--1 {
+  left: 8.3333333333%;
+}
+
+.x3_col--push--2 {
+  left: 16.6666666667%;
+}
+
+.x3_col--push--3 {
+  left: 25%;
+}
+
+.x3_col--push--4 {
+  left: 33.3333333333%;
+}
+
+.x3_col--push--5 {
+  left: 41.6666666667%;
+}
+
+.x3_col--push--6 {
+  left: 50%;
+}
+
+.x3_col--push--7 {
+  left: 58.3333333333%;
+}
+
+.x3_col--push--8 {
+  left: 66.6666666667%;
+}
+
+.x3_col--push--9 {
+  left: 75%;
+}
+
+.x3_col--push--10 {
+  left: 83.3333333333%;
+}
+
+.x3_col--push--11 {
+  left: 91.6666666667%;
+}
+
+.x3_col--push--12 {
+  left: 100%;
+}
+
+.x3_col--push--0 {
+  left: auto;
+}
+
+.x3_col--pull--0 {
+  right: 0%;
+}
+
+.x3_col--pull--1 {
+  right: 8.3333333333%;
+}
+
+.x3_col--pull--2 {
+  right: 16.6666666667%;
+}
+
+.x3_col--pull--3 {
+  right: 25%;
+}
+
+.x3_col--pull--4 {
+  right: 33.3333333333%;
+}
+
+.x3_col--pull--5 {
+  right: 41.6666666667%;
+}
+
+.x3_col--pull--6 {
+  right: 50%;
+}
+
+.x3_col--pull--7 {
+  right: 58.3333333333%;
+}
+
+.x3_col--pull--8 {
+  right: 66.6666666667%;
+}
+
+.x3_col--pull--9 {
+  right: 75%;
+}
+
+.x3_col--pull--10 {
+  right: 83.3333333333%;
+}
+
+.x3_col--pull--11 {
+  right: 91.6666666667%;
+}
+
+.x3_col--pull--12 {
+  right: 100%;
+}
+
+.x3_col--pull--0 {
+  right: auto;
+}
+
+.x3_offset--1 {
+  margin-left: 8.3333333333%;
+}
+
+.x3_offset--2 {
+  margin-left: 16.6666666667%;
+}
+
+.x3_offset--3 {
+  margin-left: 25%;
+}
+
+.x3_offset--4 {
+  margin-left: 33.3333333333%;
+}
+
+.x3_offset--5 {
+  margin-left: 41.6666666667%;
+}
+
+.x3_offset--6 {
+  margin-left: 50%;
+}
+
+.x3_offset--7 {
+  margin-left: 58.3333333333%;
+}
+
+.x3_offset--8 {
+  margin-left: 66.6666666667%;
+}
+
+.x3_offset--9 {
+  margin-left: 75%;
+}
+
+.x3_offset--10 {
+  margin-left: 83.3333333333%;
+}
+
+.x3_offset--11 {
+  margin-left: 91.6666666667%;
+}
+
+@media (min-width: 576px) {
+  .x3_col--sm {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .x3_col--sm--auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .x3_col--sm--1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+
+  .x3_col--sm--2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+
+  .x3_col--sm--3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .x3_col--sm--4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .x3_col--sm--5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+
+  .x3_col--sm--6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .x3_col--sm--7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+
+  .x3_col--sm--8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+
+  .x3_col--sm--9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .x3_col--sm--10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+
+  .x3_col--sm--11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+
+  .x3_col--sm--12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .x3_order--sm--first {
+    order: -1;
+  }
+
+  .x3_order--sm--last {
+    order: 13;
+  }
+
+  .x3_order--sm--0 {
+    order: 0;
+  }
+
+  .x3_order--sm--1 {
+    order: 1;
+  }
+
+  .x3_order--sm--2 {
+    order: 2;
+  }
+
+  .x3_order--sm--3 {
+    order: 3;
+  }
+
+  .x3_order--sm--4 {
+    order: 4;
+  }
+
+  .x3_order--sm--5 {
+    order: 5;
+  }
+
+  .x3_order--sm--6 {
+    order: 6;
+  }
+
+  .x3_order--sm--7 {
+    order: 7;
+  }
+
+  .x3_order--sm--8 {
+    order: 8;
+  }
+
+  .x3_order--sm--9 {
+    order: 9;
+  }
+
+  .x3_order--sm--10 {
+    order: 10;
+  }
+
+  .x3_order--sm--11 {
+    order: 11;
+  }
+
+  .x3_order--sm--12 {
+    order: 12;
+  }
+
+  .x3_col--sm--push--0 {
+    left: 0%;
+  }
+
+  .x3_col--sm--push--1 {
+    left: 8.3333333333%;
+  }
+
+  .x3_col--sm--push--2 {
+    left: 16.6666666667%;
+  }
+
+  .x3_col--sm--push--3 {
+    left: 25%;
+  }
+
+  .x3_col--sm--push--4 {
+    left: 33.3333333333%;
+  }
+
+  .x3_col--sm--push--5 {
+    left: 41.6666666667%;
+  }
+
+  .x3_col--sm--push--6 {
+    left: 50%;
+  }
+
+  .x3_col--sm--push--7 {
+    left: 58.3333333333%;
+  }
+
+  .x3_col--sm--push--8 {
+    left: 66.6666666667%;
+  }
+
+  .x3_col--sm--push--9 {
+    left: 75%;
+  }
+
+  .x3_col--sm--push--10 {
+    left: 83.3333333333%;
+  }
+
+  .x3_col--sm--push--11 {
+    left: 91.6666666667%;
+  }
+
+  .x3_col--sm--push--12 {
+    left: 100%;
+  }
+
+  .x3_col--sm--push--0 {
+    left: auto;
+  }
+
+  .x3_col--sm--pull--0 {
+    right: 0%;
+  }
+
+  .x3_col--sm--pull--1 {
+    right: 8.3333333333%;
+  }
+
+  .x3_col--sm--pull--2 {
+    right: 16.6666666667%;
+  }
+
+  .x3_col--sm--pull--3 {
+    right: 25%;
+  }
+
+  .x3_col--sm--pull--4 {
+    right: 33.3333333333%;
+  }
+
+  .x3_col--sm--pull--5 {
+    right: 41.6666666667%;
+  }
+
+  .x3_col--sm--pull--6 {
+    right: 50%;
+  }
+
+  .x3_col--sm--pull--7 {
+    right: 58.3333333333%;
+  }
+
+  .x3_col--sm--pull--8 {
+    right: 66.6666666667%;
+  }
+
+  .x3_col--sm--pull--9 {
+    right: 75%;
+  }
+
+  .x3_col--sm--pull--10 {
+    right: 83.3333333333%;
+  }
+
+  .x3_col--sm--pull--11 {
+    right: 91.6666666667%;
+  }
+
+  .x3_col--sm--pull--12 {
+    right: 100%;
+  }
+
+  .x3_col--sm--pull--0 {
+    right: auto;
+  }
+
+  .x3_offset--sm--0 {
+    margin-left: 0;
+  }
+
+  .x3_offset--sm--1 {
+    margin-left: 8.3333333333%;
+  }
+
+  .x3_offset--sm--2 {
+    margin-left: 16.6666666667%;
+  }
+
+  .x3_offset--sm--3 {
+    margin-left: 25%;
+  }
+
+  .x3_offset--sm--4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .x3_offset--sm--5 {
+    margin-left: 41.6666666667%;
+  }
+
+  .x3_offset--sm--6 {
+    margin-left: 50%;
+  }
+
+  .x3_offset--sm--7 {
+    margin-left: 58.3333333333%;
+  }
+
+  .x3_offset--sm--8 {
+    margin-left: 66.6666666667%;
+  }
+
+  .x3_offset--sm--9 {
+    margin-left: 75%;
+  }
+
+  .x3_offset--sm--10 {
+    margin-left: 83.3333333333%;
+  }
+
+  .x3_offset--sm--11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 768px) {
+  .x3_col--md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .x3_col--md--auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .x3_col--md--1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+
+  .x3_col--md--2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+
+  .x3_col--md--3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .x3_col--md--4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .x3_col--md--5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+
+  .x3_col--md--6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .x3_col--md--7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+
+  .x3_col--md--8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+
+  .x3_col--md--9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .x3_col--md--10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+
+  .x3_col--md--11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+
+  .x3_col--md--12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .x3_order--md--first {
+    order: -1;
+  }
+
+  .x3_order--md--last {
+    order: 13;
+  }
+
+  .x3_order--md--0 {
+    order: 0;
+  }
+
+  .x3_order--md--1 {
+    order: 1;
+  }
+
+  .x3_order--md--2 {
+    order: 2;
+  }
+
+  .x3_order--md--3 {
+    order: 3;
+  }
+
+  .x3_order--md--4 {
+    order: 4;
+  }
+
+  .x3_order--md--5 {
+    order: 5;
+  }
+
+  .x3_order--md--6 {
+    order: 6;
+  }
+
+  .x3_order--md--7 {
+    order: 7;
+  }
+
+  .x3_order--md--8 {
+    order: 8;
+  }
+
+  .x3_order--md--9 {
+    order: 9;
+  }
+
+  .x3_order--md--10 {
+    order: 10;
+  }
+
+  .x3_order--md--11 {
+    order: 11;
+  }
+
+  .x3_order--md--12 {
+    order: 12;
+  }
+
+  .x3_col--md--push--0 {
+    left: 0%;
+  }
+
+  .x3_col--md--push--1 {
+    left: 8.3333333333%;
+  }
+
+  .x3_col--md--push--2 {
+    left: 16.6666666667%;
+  }
+
+  .x3_col--md--push--3 {
+    left: 25%;
+  }
+
+  .x3_col--md--push--4 {
+    left: 33.3333333333%;
+  }
+
+  .x3_col--md--push--5 {
+    left: 41.6666666667%;
+  }
+
+  .x3_col--md--push--6 {
+    left: 50%;
+  }
+
+  .x3_col--md--push--7 {
+    left: 58.3333333333%;
+  }
+
+  .x3_col--md--push--8 {
+    left: 66.6666666667%;
+  }
+
+  .x3_col--md--push--9 {
+    left: 75%;
+  }
+
+  .x3_col--md--push--10 {
+    left: 83.3333333333%;
+  }
+
+  .x3_col--md--push--11 {
+    left: 91.6666666667%;
+  }
+
+  .x3_col--md--push--12 {
+    left: 100%;
+  }
+
+  .x3_col--md--push--0 {
+    left: auto;
+  }
+
+  .x3_col--md--pull--0 {
+    right: 0%;
+  }
+
+  .x3_col--md--pull--1 {
+    right: 8.3333333333%;
+  }
+
+  .x3_col--md--pull--2 {
+    right: 16.6666666667%;
+  }
+
+  .x3_col--md--pull--3 {
+    right: 25%;
+  }
+
+  .x3_col--md--pull--4 {
+    right: 33.3333333333%;
+  }
+
+  .x3_col--md--pull--5 {
+    right: 41.6666666667%;
+  }
+
+  .x3_col--md--pull--6 {
+    right: 50%;
+  }
+
+  .x3_col--md--pull--7 {
+    right: 58.3333333333%;
+  }
+
+  .x3_col--md--pull--8 {
+    right: 66.6666666667%;
+  }
+
+  .x3_col--md--pull--9 {
+    right: 75%;
+  }
+
+  .x3_col--md--pull--10 {
+    right: 83.3333333333%;
+  }
+
+  .x3_col--md--pull--11 {
+    right: 91.6666666667%;
+  }
+
+  .x3_col--md--pull--12 {
+    right: 100%;
+  }
+
+  .x3_col--md--pull--0 {
+    right: auto;
+  }
+
+  .x3_offset--md--0 {
+    margin-left: 0;
+  }
+
+  .x3_offset--md--1 {
+    margin-left: 8.3333333333%;
+  }
+
+  .x3_offset--md--2 {
+    margin-left: 16.6666666667%;
+  }
+
+  .x3_offset--md--3 {
+    margin-left: 25%;
+  }
+
+  .x3_offset--md--4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .x3_offset--md--5 {
+    margin-left: 41.6666666667%;
+  }
+
+  .x3_offset--md--6 {
+    margin-left: 50%;
+  }
+
+  .x3_offset--md--7 {
+    margin-left: 58.3333333333%;
+  }
+
+  .x3_offset--md--8 {
+    margin-left: 66.6666666667%;
+  }
+
+  .x3_offset--md--9 {
+    margin-left: 75%;
+  }
+
+  .x3_offset--md--10 {
+    margin-left: 83.3333333333%;
+  }
+
+  .x3_offset--md--11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .x3_col--lg {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .x3_col--lg--auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .x3_col--lg--1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+
+  .x3_col--lg--2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+
+  .x3_col--lg--3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .x3_col--lg--4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .x3_col--lg--5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+
+  .x3_col--lg--6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .x3_col--lg--7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+
+  .x3_col--lg--8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+
+  .x3_col--lg--9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .x3_col--lg--10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+
+  .x3_col--lg--11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+
+  .x3_col--lg--12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .x3_order--lg--first {
+    order: -1;
+  }
+
+  .x3_order--lg--last {
+    order: 13;
+  }
+
+  .x3_order--lg--0 {
+    order: 0;
+  }
+
+  .x3_order--lg--1 {
+    order: 1;
+  }
+
+  .x3_order--lg--2 {
+    order: 2;
+  }
+
+  .x3_order--lg--3 {
+    order: 3;
+  }
+
+  .x3_order--lg--4 {
+    order: 4;
+  }
+
+  .x3_order--lg--5 {
+    order: 5;
+  }
+
+  .x3_order--lg--6 {
+    order: 6;
+  }
+
+  .x3_order--lg--7 {
+    order: 7;
+  }
+
+  .x3_order--lg--8 {
+    order: 8;
+  }
+
+  .x3_order--lg--9 {
+    order: 9;
+  }
+
+  .x3_order--lg--10 {
+    order: 10;
+  }
+
+  .x3_order--lg--11 {
+    order: 11;
+  }
+
+  .x3_order--lg--12 {
+    order: 12;
+  }
+
+  .x3_col--lg--push--0 {
+    left: 0%;
+  }
+
+  .x3_col--lg--push--1 {
+    left: 8.3333333333%;
+  }
+
+  .x3_col--lg--push--2 {
+    left: 16.6666666667%;
+  }
+
+  .x3_col--lg--push--3 {
+    left: 25%;
+  }
+
+  .x3_col--lg--push--4 {
+    left: 33.3333333333%;
+  }
+
+  .x3_col--lg--push--5 {
+    left: 41.6666666667%;
+  }
+
+  .x3_col--lg--push--6 {
+    left: 50%;
+  }
+
+  .x3_col--lg--push--7 {
+    left: 58.3333333333%;
+  }
+
+  .x3_col--lg--push--8 {
+    left: 66.6666666667%;
+  }
+
+  .x3_col--lg--push--9 {
+    left: 75%;
+  }
+
+  .x3_col--lg--push--10 {
+    left: 83.3333333333%;
+  }
+
+  .x3_col--lg--push--11 {
+    left: 91.6666666667%;
+  }
+
+  .x3_col--lg--push--12 {
+    left: 100%;
+  }
+
+  .x3_col--lg--push--0 {
+    left: auto;
+  }
+
+  .x3_col--lg--pull--0 {
+    right: 0%;
+  }
+
+  .x3_col--lg--pull--1 {
+    right: 8.3333333333%;
+  }
+
+  .x3_col--lg--pull--2 {
+    right: 16.6666666667%;
+  }
+
+  .x3_col--lg--pull--3 {
+    right: 25%;
+  }
+
+  .x3_col--lg--pull--4 {
+    right: 33.3333333333%;
+  }
+
+  .x3_col--lg--pull--5 {
+    right: 41.6666666667%;
+  }
+
+  .x3_col--lg--pull--6 {
+    right: 50%;
+  }
+
+  .x3_col--lg--pull--7 {
+    right: 58.3333333333%;
+  }
+
+  .x3_col--lg--pull--8 {
+    right: 66.6666666667%;
+  }
+
+  .x3_col--lg--pull--9 {
+    right: 75%;
+  }
+
+  .x3_col--lg--pull--10 {
+    right: 83.3333333333%;
+  }
+
+  .x3_col--lg--pull--11 {
+    right: 91.6666666667%;
+  }
+
+  .x3_col--lg--pull--12 {
+    right: 100%;
+  }
+
+  .x3_col--lg--pull--0 {
+    right: auto;
+  }
+
+  .x3_offset--lg--0 {
+    margin-left: 0;
+  }
+
+  .x3_offset--lg--1 {
+    margin-left: 8.3333333333%;
+  }
+
+  .x3_offset--lg--2 {
+    margin-left: 16.6666666667%;
+  }
+
+  .x3_offset--lg--3 {
+    margin-left: 25%;
+  }
+
+  .x3_offset--lg--4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .x3_offset--lg--5 {
+    margin-left: 41.6666666667%;
+  }
+
+  .x3_offset--lg--6 {
+    margin-left: 50%;
+  }
+
+  .x3_offset--lg--7 {
+    margin-left: 58.3333333333%;
+  }
+
+  .x3_offset--lg--8 {
+    margin-left: 66.6666666667%;
+  }
+
+  .x3_offset--lg--9 {
+    margin-left: 75%;
+  }
+
+  .x3_offset--lg--10 {
+    margin-left: 83.3333333333%;
+  }
+
+  .x3_offset--lg--11 {
+    margin-left: 91.6666666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .x3_col--xl {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .x3_col--xl--auto {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  .x3_col--xl--1 {
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+
+  .x3_col--xl--2 {
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+
+  .x3_col--xl--3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .x3_col--xl--4 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+
+  .x3_col--xl--5 {
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%;
+  }
+
+  .x3_col--xl--6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .x3_col--xl--7 {
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%;
+  }
+
+  .x3_col--xl--8 {
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%;
+  }
+
+  .x3_col--xl--9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .x3_col--xl--10 {
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%;
+  }
+
+  .x3_col--xl--11 {
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%;
+  }
+
+  .x3_col--xl--12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .x3_order--xl--first {
+    order: -1;
+  }
+
+  .x3_order--xl--last {
+    order: 13;
+  }
+
+  .x3_order--xl--0 {
+    order: 0;
+  }
+
+  .x3_order--xl--1 {
+    order: 1;
+  }
+
+  .x3_order--xl--2 {
+    order: 2;
+  }
+
+  .x3_order--xl--3 {
+    order: 3;
+  }
+
+  .x3_order--xl--4 {
+    order: 4;
+  }
+
+  .x3_order--xl--5 {
+    order: 5;
+  }
+
+  .x3_order--xl--6 {
+    order: 6;
+  }
+
+  .x3_order--xl--7 {
+    order: 7;
+  }
+
+  .x3_order--xl--8 {
+    order: 8;
+  }
+
+  .x3_order--xl--9 {
+    order: 9;
+  }
+
+  .x3_order--xl--10 {
+    order: 10;
+  }
+
+  .x3_order--xl--11 {
+    order: 11;
+  }
+
+  .x3_order--xl--12 {
+    order: 12;
+  }
+
+  .x3_col--xl--push--0 {
+    left: 0%;
+  }
+
+  .x3_col--xl--push--1 {
+    left: 8.3333333333%;
+  }
+
+  .x3_col--xl--push--2 {
+    left: 16.6666666667%;
+  }
+
+  .x3_col--xl--push--3 {
+    left: 25%;
+  }
+
+  .x3_col--xl--push--4 {
+    left: 33.3333333333%;
+  }
+
+  .x3_col--xl--push--5 {
+    left: 41.6666666667%;
+  }
+
+  .x3_col--xl--push--6 {
+    left: 50%;
+  }
+
+  .x3_col--xl--push--7 {
+    left: 58.3333333333%;
+  }
+
+  .x3_col--xl--push--8 {
+    left: 66.6666666667%;
+  }
+
+  .x3_col--xl--push--9 {
+    left: 75%;
+  }
+
+  .x3_col--xl--push--10 {
+    left: 83.3333333333%;
+  }
+
+  .x3_col--xl--push--11 {
+    left: 91.6666666667%;
+  }
+
+  .x3_col--xl--push--12 {
+    left: 100%;
+  }
+
+  .x3_col--xl--push--0 {
+    left: auto;
+  }
+
+  .x3_col--xl--pull--0 {
+    right: 0%;
+  }
+
+  .x3_col--xl--pull--1 {
+    right: 8.3333333333%;
+  }
+
+  .x3_col--xl--pull--2 {
+    right: 16.6666666667%;
+  }
+
+  .x3_col--xl--pull--3 {
+    right: 25%;
+  }
+
+  .x3_col--xl--pull--4 {
+    right: 33.3333333333%;
+  }
+
+  .x3_col--xl--pull--5 {
+    right: 41.6666666667%;
+  }
+
+  .x3_col--xl--pull--6 {
+    right: 50%;
+  }
+
+  .x3_col--xl--pull--7 {
+    right: 58.3333333333%;
+  }
+
+  .x3_col--xl--pull--8 {
+    right: 66.6666666667%;
+  }
+
+  .x3_col--xl--pull--9 {
+    right: 75%;
+  }
+
+  .x3_col--xl--pull--10 {
+    right: 83.3333333333%;
+  }
+
+  .x3_col--xl--pull--11 {
+    right: 91.6666666667%;
+  }
+
+  .x3_col--xl--pull--12 {
+    right: 100%;
+  }
+
+  .x3_col--xl--pull--0 {
+    right: auto;
+  }
+
+  .x3_offset--xl--0 {
+    margin-left: 0;
+  }
+
+  .x3_offset--xl--1 {
+    margin-left: 8.3333333333%;
+  }
+
+  .x3_offset--xl--2 {
+    margin-left: 16.6666666667%;
+  }
+
+  .x3_offset--xl--3 {
+    margin-left: 25%;
+  }
+
+  .x3_offset--xl--4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .x3_offset--xl--5 {
+    margin-left: 41.6666666667%;
+  }
+
+  .x3_offset--xl--6 {
+    margin-left: 50%;
+  }
+
+  .x3_offset--xl--7 {
+    margin-left: 58.3333333333%;
+  }
+
+  .x3_offset--xl--8 {
+    margin-left: 66.6666666667%;
+  }
+
+  .x3_offset--xl--9 {
+    margin-left: 75%;
+  }
+
+  .x3_offset--xl--10 {
+    margin-left: 83.3333333333%;
+  }
+
+  .x3_offset--xl--11 {
+    margin-left: 91.6666666667%;
+  }
+}
+.x3_container--xl {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/*
+Project     : Skeletonboard
+Filename    : _body.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+body {
+  background-color: #f0f1f5;
+  color: #555555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/*
+Project     : Skeletonboard
+Filename    : _header.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+.header-main {
+  width: 100%;
+  float: left;
+}
+.header-main__top {
+  height: 70px;
+  background: #454d66;
+  color: #ffffff;
+}
+.header-main__logo a {
+  float: left;
+  width: auto;
+  height: 100%;
+  padding: 0 30px;
+  line-height: 70px;
+  position: relative;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+.header-main__nav {
+  float: right;
+  width: auto;
+  position: relative;
+}
+.header-main__nav nav {
+  float: left;
+  width: auto;
+  height: 70px;
+  padding: 0 15px;
+}
+.header-main__nav nav a {
+  text-decoration: none;
+  height: 60px;
+  float: left;
+  line-height: 68px;
+  padding: 0 15px;
+  color: #ffffff;
+}
+.header-main__nav nav a.active__nav {
+  text-decoration: underline;
+}
+.header-main__user {
+  width: 70px;
+  height: 70px;
+  float: right;
+  display: none;
+}
+.header-main__user img {
+  width: 70px;
+  height: 70px;
+  float: right;
+}
+.header-main__bottom {
+  height: 100px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  padding-top: 30px;
+  background-color: #ffffff;
+  border-bottom-color: #e6e9f0;
+}
+.header-main__bottom .x3_container--xl {
+  height: 40px;
+}
+.header-main__heading {
+  float: left;
+  width: auto;
+}
+.header-main__heading h3 {
+  height: 40px;
+  line-height: 38px;
+}
+.header-main__subnav {
+  float: right;
+}
+
+/*
+Project     : Skeletonboard
+Filename    : _content.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+.content-main {
+  width: 100%;
+  float: left;
+  min-height: calc(100vh - 182px);
+}
+.content-main__inner {
+  padding: 30px 15px;
+}
+
+.heading {
+  margin: 30px 0;
+}
+
+/* vendor */
+.x3_card {
+  margin-bottom: 30px;
+  border: 1px solid #dbdee6;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(52, 59, 68, 0.07);
+}
+
+/*
+Project     : Skeletonboard
+Filename    : _footer.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+.footer-main {
+  width: 100%;
+  height: 60px;
+  float: left;
+  display: none;
+  background-color: #ffffff;
+}
+.footer-main__inner {
+  padding: 20px;
+}
+
+/*
+Project     : Skeletonboard
+Filename    : _text.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+h3 {
+  font-size: 20px;
+}
+
+/*
+Project     : Skeletonboard
+Filename    : pages/_login.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+.form__login fieldset {
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  margin: 200px auto 0 auto;
+  width: 400px;
+  box-shadow: 0 1px 4px rgba(52, 59, 68, 0.07);
+  border: 1px solid #e6e9f0;
+}
+
+/*
+Project     : Skeletonboard
+Filename    : pages/_logout.scss
+Version     : 1.0
+Author      : Mark Dijkstra
+Last change : --/--/----
+*/
+.form__logout .x3_card {
+  width: 400px;
+  margin: 200px auto 0 auto;
+}
+
+/*# sourceMappingURL=bundle.css.map*/

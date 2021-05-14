@@ -1,16 +1,10 @@
-/*
-
--------------------------------------
-
-Project     : X3
-Filename    : _spacing
-Version     : 1.0
-Author      : Mark Dijkstra
-Last change : --/--/----
-
--------------------------------------
-
-*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
 
 @for $i from 0 through 20{
 
@@ -51,5 +45,7 @@ Last change : --/--/----
 }
 
 .x3_mr--3--min{
+
     margin-right: -15px!important;
+    
 }

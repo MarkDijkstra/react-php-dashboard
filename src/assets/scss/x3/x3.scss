@@ -1,21 +1,15 @@
-/*
-
--------------------------------------
-
-Project     : X3
-Filename    : x3.scss
-Version     : 1.2.1
-Author      : Mark Dijkstra
-Last change : --/--/----
-
--------------------------------------
-
-*/
+/*-------------------------------------
+|                                     |
+|  Project : X3                       |
+|  Version : 1.2.2                    |
+|  Author  : Mark Dijkstra            |
+|                                     |
+-------------------------------------*/
 
 @charset "utf-8";
 
 
-// CORe
+// CORE
 // ----------------------------------
 
 @import "_variables";
@@ -30,14 +24,13 @@ Last change : --/--/----
 // UTILITIES
 // ----------------------------------
 
-@import "utilities/_variables";
 @import "utilities/_spacing";
 @import "utilities/_position";
-//@import "utilities/_text";
-//@import "utilities/_display";
-//@import "utilities/_list";
-//@import "utilities/_overflow";
-//@import "utilities/_borderradius";
+@import "utilities/_text";
+@import "utilities/_display";
+@import "utilities/_list";
+@import "utilities/_overflow";
+@import "utilities/_borderradius";
 
 // THEMING
 // ----------------------------------
